@@ -3,9 +3,17 @@ This will set up a MOTD that displays the hostname (including the Debian version
 
 Usage:
 
-    Copy the above script into a file named setup.sh.
-    Make it executable with chmod +x setup.sh.
-    Run it with sudo ./setup.sh.
+    Copy the above script with 
+    
+    wget https://raw.githubusercontent.com/Snake16547/Debian-Simple-MOTD-Monitor/main/setup.sh
+    
+    Make it executable with 
+    
+    chmod +x setup.sh
+    
+    Run it with 
+    
+    sudo ./setup.sh.
 
 This will set up a MOTD that displays the hostname (including the Debian version), IP address, uptime, and disk usage whenever a user logs in to the system.
 
