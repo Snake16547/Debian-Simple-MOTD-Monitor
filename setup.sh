@@ -33,6 +33,9 @@ ip_address=$(hostname -I | cut -d ' ' -f 1)
 # Get uptime
 uptime=$(uptime -p)
 
+# Get current system time
+current_time=$(date +"%Y-%m-%d %H:%M:%S")
+
 # Get disk usage details
 disk_usage=$(df -h / | awk 'NR==2 {print "Usage: "$5"\tTotal: "$2"\tUsed: "$3"\tFree: "$4}')
 
@@ -41,6 +44,7 @@ echo -e "\033[1;32m=== System Status ===\033[0m"
 echo -e "\033[1;34mHostname:\033[0m $hostname (Debian $debian_version)"
 echo -e "\033[1;34mIP Address:\033[0m $ip_address"
 echo -e "\033[1;34mUptime:\033[0m $uptime"
+echo -e "\033[1;34mCurrent Time:\033[0m $current_time"
 echo -e "\033[1;34mDisk Usage:\033[0m $disk_usage"
 EOF
 
